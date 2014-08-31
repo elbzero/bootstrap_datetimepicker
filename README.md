@@ -1,7 +1,7 @@
 ## Installation
 Add these lines to your application's Gemfile:
 ```ruby
-gem 'bootstrap_datetimepicker'
+gem 'bootstrap_datetimepicker', :git => 'https://github.com/garyfoster/bootstrap_datetimepicker.git', :branch => 'master'
 ```
 
 Then execute
@@ -43,7 +43,7 @@ Also, modify your `application.css`:
 
 #### To use the datetime picker:
 - Using simple form: use the datetime_local field
-  - Example: f.input :some\_datetime, as: datetime\_local
+  - Example: f.input :some\_datetime, as: :datetime\_local
 - Using rails helpers: use datetime\_local\_field and datetime\_local\_field\_tag
   - Example: datetime\_local\_field\_tag "some_datetime"
   - Example: datetime\_local\_field "user" "birth_datetime"
