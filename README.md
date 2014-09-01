@@ -54,7 +54,7 @@ Also, modify your `application.css`:
 
 When refactoring and modifying code in this project while developing other projects, you may want your other project to point to the local source rather than the remote on Github. In your client project, you still need to keep the Gemfile pointing to the Github location but you can override your bundler setting like as follows:
 
-`bundle config local.radbear_rails /Users/garyfoster/Documents/Projects/bootstrap_datetimepicker`
+`bundle config local.bootstrap_datetimepicker /Users/garyfoster/Documents/Projects/bootstrap_datetimepicker`
 
 to undo this and revert to the remote github repository:
 
