@@ -3,6 +3,8 @@
 //! version : 3.1.1
  * https://github.com/Eonasdan/bootstrap-datetimepicker/
  */
+
+/* https://github.com/garyfoster/bootstrap_datetimepicker/issues/1 */
 input[type=date] {
 	line-height: normal;
 }
