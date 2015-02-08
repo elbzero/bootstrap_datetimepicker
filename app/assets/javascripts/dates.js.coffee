@@ -49,7 +49,17 @@ class DateTimePicker
       # Init Picker
       sel.datetimepicker({
         format: view,
-        pickTime: false
+        showClear: true,
+        showTodayButton: true,
+        icons : 
+          time: 'fa fa-clock'
+          date: 'fa fa-calendar'
+          up: 'fa fa-arrow-up'
+          down: 'fa fa-arrow-down'
+          previous: 'fa fa-arrow-left'
+          next: 'fa fa-arrow-right'
+          today: 'fa fa-calendar'
+          clear: 'fa fa-times-circle'
       })
 
     if !Modernizr.inputtypes.time
@@ -64,7 +74,17 @@ class DateTimePicker
       # Init Picker
       sel.datetimepicker({
         format: view,
-        pickDate: false
+        showClear: true,
+        showTodayButton: true,
+        icons : 
+          time: 'fa fa-clock'
+          date: 'fa fa-calendar'
+          up: 'fa fa-arrow-up'
+          down: 'fa fa-arrow-down'
+          previous: 'fa fa-arrow-left'
+          next: 'fa fa-arrow-right'
+          today: 'fa fa-calendar'
+          clear: 'fa fa-times-circle'
       })
 
     if !Modernizr.inputtypes['datetime-local']
