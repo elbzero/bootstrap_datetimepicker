@@ -67,6 +67,7 @@ class DateTimePicker
 
       # Update Values
       sel = $("input[type='date']")
+      default_current_date = sel.data("default-current-date")
       @view_formatter(sel, format, view)
 
       # Init Picker
@@ -74,8 +75,9 @@ class DateTimePicker
         format: view,
         showClear: true,
         showTodayButton: true,
+        useCurrent: default_current_date,
         icons : 
-          time: 'fa fa-clock'
+          time: 'fa fa-clock-o'
           date: 'fa fa-calendar'
           up: 'fa fa-arrow-up'
           down: 'fa fa-arrow-down'
@@ -92,6 +94,7 @@ class DateTimePicker
 
       # Update Values
       sel = $("input[type='time']")
+      default_current_date = sel.data("default-current-date")
       @view_formatter(sel, format, view)
 
       # Init Picker
@@ -99,8 +102,9 @@ class DateTimePicker
         format: view,
         showClear: true,
         showTodayButton: true,
+        useCurrent: default_current_date,
         icons : 
-          time: 'fa fa-clock'
+          time: 'fa fa-clock-o'
           date: 'fa fa-calendar'
           up: 'fa fa-arrow-up'
           down: 'fa fa-arrow-down'
@@ -117,11 +121,24 @@ class DateTimePicker
 
       # Update Values
       sel = $("input[type='datetime-local']")
+      default_current_date = sel.data("default-current-date")
       @view_formatter(sel, format, view)
 
       # Init Picker
       sel.datetimepicker({
-        format: view
+        format: view,
+        showClear: true,
+        showTodayButton: true,
+        useCurrent: default_current_date,
+        icons : 
+          time: 'fa fa-clock-o'
+          date: 'fa fa-calendar'
+          up: 'fa fa-arrow-up'
+          down: 'fa fa-arrow-down'
+          previous: 'fa fa-arrow-left'
+          next: 'fa fa-arrow-right'
+          today: 'fa fa-calendar'
+          clear: 'fa fa-times-circle'
       })
 
 $ ->
