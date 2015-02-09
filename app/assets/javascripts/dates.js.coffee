@@ -83,7 +83,7 @@ class DateTimePicker
           down: 'fa fa-arrow-down'
           previous: 'fa fa-arrow-left'
           next: 'fa fa-arrow-right'
-          today: 'fa fa-calendar'
+          today: 'fa fa-calendar-o'
           clear: 'fa fa-times-circle'
       })
 
@@ -110,7 +110,7 @@ class DateTimePicker
           down: 'fa fa-arrow-down'
           previous: 'fa fa-arrow-left'
           next: 'fa fa-arrow-right'
-          today: 'fa fa-calendar'
+          today: 'fa fa-calendar-o'
           clear: 'fa fa-times-circle'
       })
 
@@ -137,7 +137,7 @@ class DateTimePicker
           down: 'fa fa-arrow-down'
           previous: 'fa fa-arrow-left'
           next: 'fa fa-arrow-right'
-          today: 'fa fa-calendar'
+          today: 'fa fa-calendar-o'
           clear: 'fa fa-times-circle'
       })
 
