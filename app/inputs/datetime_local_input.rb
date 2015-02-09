@@ -7,7 +7,7 @@ class DatetimeLocalInput < SimpleForm::Inputs::StringInput
 
     merged_input_options = merge_wrapper_options(input_html_options, wrapper_options)
 
-    @builder.text_field(attribute_name, merged_input_options)
+    @builder.text_field(attribute_name, :"data-current-date" => "Test", value: "123")
   end
 
   def value(object)
