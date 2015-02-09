@@ -3,7 +3,7 @@ class DatetimeLocalInput < SimpleForm::Inputs::StringInput
     input_html_options[:type] = 'datetime-local'
     input_html_options[:html5] = true
     input_html_options[:title] = "Test9"
-    input_html_options[:data] = {default_current_date: "true" }
+    input_html_options[:data] = {default_current_date: true }
     input_html_options[:value] = value(object) ? value(object).strftime('%FT%R') : nil
 
     merged_input_options = merge_wrapper_options(input_html_options, wrapper_options)

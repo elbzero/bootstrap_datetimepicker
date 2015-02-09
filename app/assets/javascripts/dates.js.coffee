@@ -44,7 +44,7 @@ class DateTimePicker
 
       # Update Values
       sel = $("input[type='date']")
-      default_current_date = sel.data("default-current-date") == "true"
+      default_current_date = sel.data("default_current_date") == "true"
       @view_formatter(sel, format, view)
 
       # Init Picker
@@ -71,7 +71,7 @@ class DateTimePicker
 
       # Update Values
       sel = $("input[type='time']")
-      default_current_date = sel.data("default-current-date") == "true"
+      default_current_date = sel.data("default_current_date") == "true"
       @view_formatter(sel, format, view)
 
       # Init Picker
