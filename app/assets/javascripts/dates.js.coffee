@@ -4,6 +4,29 @@ class DateTimePicker
       format : 'YYYY-MM-DD'
       view : 'M/D/YYYY' 
 
+  set_date : (sel, date) ->
+    thisObj = this
+    type = sel.attr('type')
+    modern = false
+
+    if type == "date"
+      format = 'YYYY-MM-DD'
+      view = 'M/D/YYYY'
+      modern = Modernizr.inputtypes.date
+    else if type == "time"
+      format = 'HH:mm:ss.SSS'
+      view = 'h:mm A'
+      modern = Modernizr.inputtypes.time
+    else if type = "datetime-local"
+      format = 'YYYY-MM-DDTHH:mm'
+      view = 'M/D/YYYY h:mm A'
+      modern = Modernizr.inputtypes['datetime-local']
+
+    if modern
+      sel.val( moment(date).format( format ) )
+    else
+      sel.val(thisObj.time_convert(moment(date).format( view ), format, view))
+
   time_convert : (time, from, to) ->
     if time
       if !moment(time, to, true).isValid()
