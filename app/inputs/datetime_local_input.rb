@@ -8,7 +8,7 @@ class DatetimeLocalInput < SimpleForm::Inputs::StringInput
   end
 
   def input_html_options
-    {class: 'form-control', readonly: true, type: "date", title: "test5"}
+    {class: 'form-control', readonly: true, type: "date", title: "test7"}
   end
 
 end
