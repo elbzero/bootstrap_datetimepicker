@@ -12,4 +12,9 @@ class DatetimeLocalInput < SimpleForm::Inputs::StringInput
   def value(object)
     object.send @attribute_name if object
   end
+
+  def input_html_options
+    {class: 'form-control', readonly: true, type: "date", title: "test5"}
+  end
+
 end
