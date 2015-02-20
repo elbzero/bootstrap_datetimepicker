@@ -75,6 +75,7 @@ class DateTimePicker
         format: view,
         showClear: true,
         showTodayButton: true,
+        keepOpen: true,
         useCurrent: default_current_date,
         icons : 
           time: 'fa fa-clock-o'
@@ -102,6 +103,7 @@ class DateTimePicker
         format: view,
         showClear: true,
         showTodayButton: true,
+        keepOpen: true,
         useCurrent: default_current_date,
         icons : 
           time: 'fa fa-clock-o'
@@ -129,6 +131,7 @@ class DateTimePicker
         format: view,
         showClear: true,
         showTodayButton: true,
+        keepOpen: true,
         useCurrent: default_current_date,
         icons : 
           time: 'fa fa-clock-o'
