@@ -67,6 +67,7 @@ class DateTimePicker
 
       # Update Values
       sel = $("input[type='date']")
+      sel.attr( "autocomplete", "off")
       default_current_date = sel.data("default-current-date")
       @view_formatter(sel, format, view)
 
@@ -95,6 +96,7 @@ class DateTimePicker
 
       # Update Values
       sel = $("input[type='time']")
+      sel.attr( "autocomplete", "off")
       default_current_date = sel.data("default-current-date")
       @view_formatter(sel, format, view)
 
@@ -123,6 +125,7 @@ class DateTimePicker
 
       # Update Values
       sel = $("input[type='datetime-local']")
+      sel.attr( "autocomplete", "off")
       default_current_date = sel.data("default-current-date")
       @view_formatter(sel, format, view)
 
