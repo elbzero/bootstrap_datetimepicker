@@ -59,93 +59,56 @@ class DateTimePicker
     else
       @time_convert(value, view, format)
 
+  do_default_input_changes : (sel, format, view) ->
+    @view_formatter(sel, format, view)
+    sel.attr( "autocomplete", "off")
+    sel.each ->
+
+      default_current_date = $(this).data("default-current-date")
+      keepOpen = if $(this).data("keep-open")? then $(this).data("keep-open") else true 
+
+      # Init Picker
+      $(this).datetimepicker({
+        format: view,
+        showClear: true,
+        showTodayButton: true,
+        keepOpen: keepOpen,
+        useCurrent: default_current_date,
+        icons : 
+          time: 'fa fa-clock-o'
+          date: 'fa fa-calendar'
+          up: 'fa fa-arrow-up'
+          down: 'fa fa-arrow-down'
+          previous: 'fa fa-arrow-left'
+          next: 'fa fa-arrow-right'
+          today: 'fa fa-calendar-o'
+          clear: 'fa fa-times-circle'
+      })
+
   addDateEvents : ->
     if !Modernizr.inputtypes.date
       # Formats
       format = 'YYYY-MM-DD'
       view = 'M/D/YYYY'
-
       # Update Values
       sel = $("input[type='date']")
-      sel.attr( "autocomplete", "off")
-      default_current_date = sel.data("default-current-date")
-      @view_formatter(sel, format, view)
-
-      # Init Picker
-      sel.datetimepicker({
-        format: view,
-        showClear: true,
-        showTodayButton: true,
-        keepOpen: true,
-        useCurrent: default_current_date,
-        icons : 
-          time: 'fa fa-clock-o'
-          date: 'fa fa-calendar'
-          up: 'fa fa-arrow-up'
-          down: 'fa fa-arrow-down'
-          previous: 'fa fa-arrow-left'
-          next: 'fa fa-arrow-right'
-          today: 'fa fa-calendar-o'
-          clear: 'fa fa-times-circle'
-      })
+      this.do_default_input_changes( sel, format, view)
 
     if !Modernizr.inputtypes.time
       # Formats
       format = 'HH:mm:ss.SSS'
       view = 'h:mm A'
-
       # Update Values
       sel = $("input[type='time']")
-      sel.attr( "autocomplete", "off")
-      default_current_date = sel.data("default-current-date")
-      @view_formatter(sel, format, view)
-
-      # Init Picker
-      sel.datetimepicker({
-        format: view,
-        showClear: true,
-        showTodayButton: true,
-        keepOpen: true,
-        useCurrent: default_current_date,
-        icons : 
-          time: 'fa fa-clock-o'
-          date: 'fa fa-calendar'
-          up: 'fa fa-arrow-up'
-          down: 'fa fa-arrow-down'
-          previous: 'fa fa-arrow-left'
-          next: 'fa fa-arrow-right'
-          today: 'fa fa-calendar-o'
-          clear: 'fa fa-times-circle'
-      })
-
+      this.do_default_input_changes( sel, format, view)
+      
     if !Modernizr.inputtypes['datetime-local']
       # Formats
       format = 'YYYY-MM-DDTHH:mm'
       view = 'M/D/YYYY h:mm A'
-
       # Update Values
       sel = $("input[type='datetime-local']")
-      sel.attr( "autocomplete", "off")
-      default_current_date = sel.data("default-current-date")
-      @view_formatter(sel, format, view)
-
-      # Init Picker
-      sel.datetimepicker({
-        format: view,
-        showClear: true,
-        showTodayButton: true,
-        keepOpen: true,
-        useCurrent: default_current_date,
-        icons : 
-          time: 'fa fa-clock-o'
-          date: 'fa fa-calendar'
-          up: 'fa fa-arrow-up'
-          down: 'fa fa-arrow-down'
-          previous: 'fa fa-arrow-left'
-          next: 'fa fa-arrow-right'
-          today: 'fa fa-calendar-o'
-          clear: 'fa fa-times-circle'
-      })
+      this.do_default_input_changes( sel, format, view)
 
 $ ->
   window.dateTimePicker = new DateTimePicker()
