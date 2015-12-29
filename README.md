@@ -1,7 +1,7 @@
 ## Installation
 Add these lines to your application's Gemfile:
 ```ruby
-gem 'bootstrap_datetimepicker', :git => 'https://github.com/garyfoster/bootstrap_datetimepicker.git', :branch => 'master'
+gem 'bootstrap_datetimepicker'
 ```
 
 Then execute
