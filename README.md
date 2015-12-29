@@ -50,6 +50,12 @@ Also, modify your `application.css`:
 
 ## Development
 
+### To Publish Gem Update
+```
+gem build bootstrap_datetimepicker.gemspec
+gem push bootstrap_datetimepicker-0.0.2.gem
+```
+
 ### Point Projects to Local Source Instead of Github
 
 When refactoring and modifying code in this project while developing other projects, you may want your other project to point to the local source rather than the remote on Github. In your client project, you still need to keep the Gemfile pointing to the Github location but you can override your bundler setting like as follows:
