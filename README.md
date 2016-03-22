@@ -53,7 +53,7 @@ Also, modify your `application.css`:
 ### To Publish Gem Update
 ```
 gem build bootstrap_datetimepicker.gemspec
-gem push bootstrap_datetimepicker-0.0.2.gem
+gem push bootstrap_datetimepicker-0.0.3.gem
 ```
 
 ### Point Projects to Local Source Instead of Github
